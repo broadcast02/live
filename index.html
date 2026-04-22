@@ -1,216 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Live Sports Streaming</title>
-
-<style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: Arial, sans-serif;
-    color: #fff;
-    text-align: center;
-
-    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.9)),
-    url('https://www.rollingstone.com/wp-content/uploads/2025/08/ESPN-HSV-Still-1024x576-1.png?w=1024&h=576&crop=1');
-
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-}
-
-/* 🔝 TOP BANNER */
-.top-banner {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    height: 60px;
-    background: rgba(0,0,0,0.8);
-    backdrop-filter: blur(5px);
-    z-index: 9999;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* 🔻 BOTTOM BANNER */
-.bottom-banner {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    height: 60px;
-    background: rgba(0,0,0,0.8);
-    backdrop-filter: blur(5px);
-    z-index: 9999;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.container {
-    padding-top: 90px;
-    padding-bottom: 90px; /* biar gak ketutup bottom banner */
-}
-
-.live-badge {
-    background: red;
-    padding: 8px 18px;
-    border-radius: 30px;
-    font-weight: bold;
-    display: inline-block;
-    margin-bottom: 15px;
-    animation: blink 1s infinite;
-}
-
-@keyframes blink {
-    0% {opacity: 1;}
-    50% {opacity: 0.5;}
-    100% {opacity: 1;}
-}
-
-.player-box {
-    position: relative;
-    width: 90%;
-    max-width: 650px;
-    margin: 20px auto;
-    border-radius: 12px;
-    overflow: hidden;
-    box-shadow: 0 0 25px rgba(255,0,0,0.6);
-    cursor: pointer;
-}
-
-.player-box img {
-    width: 100%;
-}
-
-.player-overlay {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.3);
-    top: 0;
-}
-
-.play-btn {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 70px;
-    background: rgba(0,0,0,0.6);
-    padding: 20px 30px;
-    border-radius: 50%;
-    animation: glow 1s infinite;
-}
-
-@keyframes glow {
-    0% {box-shadow: 0 0 10px red;}
-    50% {box-shadow: 0 0 25px red;}
-    100% {box-shadow: 0 0 10px red;}
-}
-
-.cta-btn {
-    display: inline-block;
-    margin-top: 20px;
-    padding: 16px 30px;
-    font-size: 18px;
-    font-weight: bold;
-    color: #fff;
-    background: linear-gradient(45deg, #ff0000, #ff9900);
-    border-radius: 50px;
-    text-decoration: none;
-    box-shadow: 0 0 20px rgba(255,0,0,0.8);
-    animation: pulse 1.2s infinite;
-}
-
-@keyframes pulse {
-  0% {transform: scale(1);}
-  50% {transform: scale(1.07);}
-  100% {transform: scale(1);}
-}
-
-.desc {
-    margin: 15px;
-    color: #ddd;
-}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PhotoConnect - Photography Marketplace</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background: #f7f7f7;
+      color: #333;
+    }
+    header {
+      background: #111;
+      color: white;
+      padding: 40px 20px;
+      text-align: center;
+    }
+    section {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+      background: white;
+      margin-top: 20px;
+      border-radius: 10px;
+    }
+    h1, h2 {
+      margin-bottom: 10px;
+    }
+    .btn {
+      display: inline-block;
+      padding: 12px 20px;
+      background: #000;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 6px;
+      margin-top: 10px;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      font-size: 12px;
+      color: #666;
+    }
+  </style>
 </head>
-
 <body>
 
-<!-- 🔝 TOP BANNER -->
-<div class="top-banner">
-<script>
-  atOptions = {
-    'key' : '4ead5a0aefe527bc362e6daf146e5fe9',
-    'format' : 'iframe',
-    'height' : 50,
-    'width' : 320,
-    'params' : {}
-  };
-</script>
-<script src="https://www.highperformanceformat.com/4ead5a0aefe527bc362e6daf146e5fe9/invoke.js"></script>
-</div>
+<header>
+  <h1>PhotoConnect</h1>
+  <p>An online marketplace connecting professional photographers with clients</p>
+</header>
 
-<div class="container">
+<section>
+  <h2>About Us</h2>
+  <p>
+    PhotoConnect is a digital platform that allows customers to discover, book,
+    and hire professional photographers for events, portraits, weddings, and commercial shoots.
+  </p>
+</section>
 
-<div class="live-badge">🔴 LIVE NOW</div>
+<section>
+  <h2>How It Works</h2>
+  <ul>
+    <li>Browse photographer profiles</li>
+    <li>Choose a service and schedule a session</li>
+    <li>Secure online payment via our platform</li>
+    <li>Receive professional photography services</li>
+  </ul>
+</section>
 
-<h1>Watch Live HD</h1>
+<section>
+  <h2>Services</h2>
+  <p>
+    We support various photography services including wedding photography,
+    portrait sessions, event coverage, and commercial photography.
+  </p>
+</section>
 
-<a href="https://omg10.com/4/10899282">
-    <div class="player-box">
-        <img src="https://store.streamspell.com/cdn/shop/products/Superstar-Stream-Package-2_1200x1200.gif?v=1756298656">
-        <div class="player-overlay"></div>
-        <div class="play-btn">▶</div>
-    </div>
-</a>
+<section>
+  <h2>Contact</h2>
+  <p>Email: support@photoconnect.com</p>
+  <p>Business Type: Online Marketplace</p>
+</section>
 
-<p class="desc">Full HD Streaming • No Buffer • All Available</p>
+<section>
+  <h2>Legal</h2>
+  <p>
+    PhotoConnect operates as a marketplace platform. We do not directly provide photography services,
+    but connect clients with independent photographers.
+  </p>
+</section>
 
-<a href="https://omg10.com/4/10899282" class="cta-btn">
-▶️ WATCH LIVE NOW
-</a>
-
-</div>
-
-<!-- 🔻 BOTTOM BANNER -->
-<div class="bottom-banner">
-</div>
-
-<!-- 📊 HISTATS -->
-<script type="text/javascript">
-var _Hasync= _Hasync|| [];
-_Hasync.push(['Histats.start', '1,4798012,4,0,0,0,00010000']);
-_Hasync.push(['Histats.fasi', '1']);
-_Hasync.push(['Histats.track_hits', '']);
-(function() {
-var hs = document.createElement('script'); 
-hs.type = 'text/javascript'; 
-hs.async = true;
-hs.src = ('//s10.histats.com/js15_as.js');
-(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(hs);
-})();
-</script>
-
-<!-- 🔥 GEO -->
-<script>
-setTimeout(function(){
-    fetch("https://ipinfo.io/json")
-    .then(res => res.json())
-    .then(data => {
-        if (data.country === "ID") {
-            window.location.href = "https://omg10.com/4/10899282";
-        }
-    });
-}, 10);
-</script>
+<footer>
+  © 2026 PhotoConnect. All rights reserved.
+</footer>
 
 </body>
 </html>
